@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plataforma Estudiantil & Nutricional</title>
+  
+  <!-- External Libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Gourmetnutritionny</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#material">Material de Estudio</a></li>
+          <li class="nav-item"><a class="nav-link btn-nav" href="#calculadora">Académica</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="inicio" class="hero-section">
+    <div class="container text-center text-md-start">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <h1 class="display-4 fw-bold">Bienvenido a tu Portal de Nutrición</h1>
+          <p class="lead mt-3">Aprende, calcula y estructura tus requerimientos diarios con nuestras herramientas académicas y material de apoyo.</p>
+          <a href="#material" class="btn btn-accent btn-lg mt-3">Ver Material</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PDF Content Section (Placeholder) -->
+  <section id="material" class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Contenido del Curso (PDF)</h2>
+        <div class="title-divider"></div>
+        <p class="text-muted">La información teórica y académica extraída de tu documento.</p>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Reemplaza esto con el contenido de tu PDF -->
+        <div class="col-md-6">
+          <div class="content-card p-4 h-100 shadow-sm bg-white">
+            <h4 class="fw-bold mb-3" style="color: var(--udv-blue);">Módulo 1: Fundamentos</h4>
+            <p>[Pega aquí el texto del PDF] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="content-card p-4 h-100 shadow-sm bg-white">
+            <h4 class="fw-bold mb-3" style="color: var(--udv-blue);">Módulo 2: Metabolismo</h4>
+            <p>[Pega aquí el texto del PDF] Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator Section -->
+  <section id="calculadora" class="py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Calculadora de Estructura Nutricional</h2>
+        <div class="title-divider"></div>
+        <p class="text-muted">Herramienta interactiva para calcular requerimientos diarios.</p>
+      </div>
+
+      <div class="card p-4 p-md-5 shadow-lg border-0" style="border-radius: 12px;">
+        <form id="fitnessForm">
+          
+          <h3 class="step-title">1. Datos Personales & Físicos</h3>
+          <div class="row g-4 mb-4">
+            <div class="col-md-3">
+              <label id="weightLabel" for="weight" class="form-label">Peso (kg)</label>
+              <input type="number" step="0.1" id="weight" class="form-control" placeholder="Ej. 70" required>
+            </div>
+            <div id="metricHeightGroup" class="col-md-3">
+              <label for="height" class="form-label">Altura (cm)</label>
+              <input type="number" step="0.1" id="height" class="form-control" placeholder="Ej. 175" required>
+            </div>
+            <div id="imperialHeightGroup" class="col-md-3 d-none">
+              <div class="row g-2">
+                <div class="col-6">
+                  <label for="heightFt" class="form-label">Altura (ft)</label>
+                  <input type="number" id="heightFt" class="form-control" placeholder="5">
+                </div>
+                <div class="col-6">
+                  <label for="heightIn" class="form-label">Altura (in)</label>
+                  <input type="number" id="heightIn" class="form-control" placeholder="9">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="age" class="form-label">Edad</label>
+              <input type="number" id="age" class="form-control" placeholder="Ej. 30" required>
+            </div>
+            <div class="col-md-3">
+              <label for="gender" class="form-label">Género</label>
+              <select id="gender" class="form-select">
+                <option value="male">Hombre</option>
+                <option value="female">Mujer</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label for="units" class="form-label">Sistema</label>
+              <select id="units" class="form-select" onchange="toggleUnits();">
+                <option value="metric">Métrico</option>
+                <option value="imperial">Imperial</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="bodyFat" class="form-label">% Grasa Corporal (Opcional)</label>
+              <input type="number" id="bodyFat" class="form-control" placeholder="Ej. 18">
+            </div>
+          </div>
+
+          <h3 class="step-title mt-5">2. Actividad y Objetivos</h3>
+          <div class="row g-4 mb-3">
+            <div class="col-md-4">
+              <label for="activity" class="form-label">Nivel de Actividad</label>
+              <select id="activity" class="form-select">
+                <option value="1.2">Sedentario</option>
+                <option value="1.375">Ligero (1-3 días)</option>
+                <option value="1.55">Moderado (3-5 días)</option>
+                <option value="1.725">Muy Activo (6-7 días)</option>
+                <option value="1.9">Atleta</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="goal" class="form-label">Objetivo</label>
+              <select id="goal" class="form-select">
+                <option value="deficit">Pérdida de Grasa</option>
+                <option value="maintain">Mantenimiento</option>
+                <option value="surplus">Superávit</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="meals" class="form-label">Comidas al Día</label>
+              <input type="number" id="meals" class="form-control" value="4" min="2" max="6">
+            </div>
+          </div>
+
+          <h3 class="step-title mt-5">3. Entrenamiento Intratreno</h3>
+          <div class="row g-4 mb-4">
+            <div class="col-md-6">
+              <label for="durMin" class="form-label">Duración Entreno (min)</label>
+              <input type="number" id="durMin" class="form-control" placeholder="Ej. 60">
+            </div>
+            <div class="col-md-6">
+              <label for="sport" class="form-label">Disciplina Principal</label>
+              <select id="sport" class="form-select">
+                <option value="weights">Pesas / Musculación</option>
+                <option value="runner">Corredor / Running</option>
+              </select>
+            </div>
+          </div>
+
+          <h3 class="step-title mt-5">4. Macros (%)</h3>
+          <div class="row g-4 mb-4">
+            <div class="col-md-4">
+              <label for="proteinPct" class="form-label">Proteína</label>
+              <input type="number" id="proteinPct" class="form-control" value="30">
+            </div>
+            <div class="col-md-4">
+              <label for="fatPct" class="form-label">Grasas</label>
+              <input type="number" id="fatPct" class="form-control" value="25">
+            </div>
+            <div class="col-md-4">
+              <label for="carbPct" class="form-label">Carbohidratos</label>
+              <input type="number" id="carbPct" class="form-control" value="45">
+            </div>
+          </div>
+
+          <div class="mt-5 text-center">
+            <button type="button" class="btn btn-primary btn-lg px-5" onclick="calculate()">Calcular Resultados</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- ZONA DE RESULTADOS -->
+      <div id="resultsZone" class="mt-5">
+        <div id="errorBox" class="alert alert-danger d-none" role="alert"></div>
+        
+        <div id="summaryCards" class="row g-4 d-none mt-2">
+          
+          <div class="col-md-12 mb-3">
+            <div class="card p-4 text-center border-0 result-hero">
+               <h4 class="text-white">Energía Diaria Objetivo</h4>
+               <h2 class="display-3 fw-bold text-accent mb-0" id="resKcal">0</h2>
+               <p class="text-white-50 mb-0">Kcal / día</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card p-4 text-center border-0 shadow-sm result-card border-blue">
+              <h5 class="text-muted text-uppercase">Proteína</h5>
+              <h2 id="resProt" class="fw-bold" style="color: var(--udv-blue);">0g</h2>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-4 text-center border-0 shadow-sm result-card border-gold">
+              <h5 class="text-muted text-uppercase">Carbohidratos</h5>
+              <h2 id="resCarb" class="fw-bold" style="color: var(--udv-gold);">0g</h2>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-4 text-center border-0 shadow-sm result-card border-cyan">
+              <h5 class="text-muted text-uppercase">Grasas</h5>
+              <h2 id="resFat" class="fw-bold" style="color: var(--udv-cyan);">0g</h2>
+            </div>
+          </div>
+
+          <div class="col-md-12 mt-5 text-center d-flex justify-content-center">
+             <canvas id="macroChart" class="d-none" style="max-height: 300px; max-width: 100%;"></canvas>
+          </div>
+          
+          <div id="mealsWrap" class="col-md-12 d-none mt-5">
+            <h4 class="fw-bold mb-3" style="color: var(--udv-blue);">División de Comidas</h4>
+            <div class="table-responsive bg-white shadow-sm p-3 rounded">
+              <table class="table table-striped align-middle text-center mb-0">
+                <thead class="table-dark-blue">
+                  <tr>
+                    <th>Comida</th>
+                    <th>Kcal</th>
+                    <th>Proteína</th>
+                    <th>Grasas</th>
+                    <th>Carbos</th>
+                  </tr>
+                </thead>
+                <tbody id="mealsBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-4 text-white" style="background-color: var(--udv-dark);">
+    <p class="mb-0">© 2026 Plataforma Académica & Nutricional. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

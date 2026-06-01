@@ -1,0 +1,119 @@
+:root {
+  /* Paleta inspirada en sitios universitarios (UDV) */
+  --udv-blue: #006400;      /* Azul profundo principal */
+  --udv-dark: #051326;      /* Azul casi negro */
+  --udv-gold: #F2A900;      /* Amarillo/Dorado institucional */
+  --udv-cyan: #14a800;      /* Azul claro secundario */
+  --bg-light: #F8F9FA;      /* Gris muy claro para fondos */
+  --text-main: #333333;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-light);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Navegación */
+.custom-navbar {
+  background-color: var(--udv-blue);
+  padding: 15px 0;
+}
+.custom-navbar .navbar-brand, .custom-navbar .nav-link {
+  color: #ffffff !important;
+}
+.custom-navbar .nav-link:hover {
+  color: #14a800 !important;
+}
+.btn-nav {
+  background-color: var(--udv-gold);
+  color: var(--udv-dark) !important;
+  border-radius: 4px;
+  padding: 8px 16px !important;
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/HERO.jpg);
+  /*background: linear-gradient(135deg, var(--udv-blue) 0%, var(--udv-cyan) 100%);*/
+  color: white;
+  padding: 100px 0;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+.btn-accent {
+  background-color: var(--udv-gold);
+  color: var(--udv-dark);
+  font-weight: bold;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+}
+.btn-accent:hover {
+  background-color: #d19200;
+  color: white;
+}
+
+/* Tipografía y Títulos */
+.section-title {
+  color: var(--udv-blue);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.title-divider {
+  width: 60px;
+  height: 4px;
+  background-color: var(--udv-gold);
+  margin: 15px auto 20px auto;
+}
+.step-title {
+  font-size: 1.25rem;
+  color: var(--udv-blue);
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Botones Calculadora */
+.btn-primary {
+  background-color: var(--udv-blue);
+  border-color: var(--udv-blue);
+  font-family: 'Montserrat', sans-serif;
+}
+.btn-primary:hover {
+  background-color: var(--udv-cyan);
+  border-color: var(--udv-cyan);
+}
+
+/* Cajas de Resultados */
+.result-hero {
+  background-color: var(--udv-blue);
+}
+.text-accent {
+  color: var(--udv-gold) !important;
+}
+.result-card {
+  border-top: 5px solid transparent !important;
+}
+.border-blue { border-top-color: var(--udv-blue) !important; }
+.border-gold { border-top-color: var(--udv-gold) !important; }
+.border-cyan { border-top-color: var(--udv-cyan) !important; }
+
+/* Tablas */
+.table-dark-blue {
+  background-color: var(--udv-blue);
+  color: white;
+}
+.table-dark-blue th {
+  background-color: var(--udv-blue);
+  color: white;
+  border: none;
+}
