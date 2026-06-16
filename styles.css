@@ -1,0 +1,370 @@
+:root {
+  /* Paleta Verde Oficial extraída de las imágenes */
+  --brand-dark: #031A10;       /* Verde ultra oscuro para textos principales y footer */
+  --brand-primary: #0C3E26;    /* Verde bosque para elementos primarios y botones */
+  --brand-accent: #8AD400;     /* Verde lima radiante para destacados e indicadores */
+  --brand-bg: #EBF7E9;         /* Fondo menta suave pastel de la página */
+  --card-bg: #FFFFFF;
+  --text-muted: #556B5D;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--brand-dark);
+  background-color: var(--brand-bg);
+}
+
+h1, h2, h3, h4, h5, .navbar-brand, .plan-price {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.fw-extrabold {
+  font-weight: 800;
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgba(12, 62, 38, 0.1);
+  padding: 20px 0;
+}
+.custom-navbar .navbar-brand {
+  color: var(--brand-primary) !important;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+}
+.brand-arrow {
+  font-size: 0.9rem;
+}
+.custom-navbar .nav-link {
+  color: var(--brand-dark) !important;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 8px 15px !important;
+}
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  color: var(--brand-accent) !important;
+}
+.btn-nav-contact {
+  border: 1px solid var(--brand-primary);
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 80px 0 40px 0;
+  background-color: var(--brand-bg);
+}
+.hero-title {
+  color: var(--brand-dark);
+  font-size: 2.8rem;
+  letter-spacing: -0.5px;
+}
+.btn-brand-dark {
+  background-color: var(--brand-dark);
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+  transition: all 0.2s ease;
+}
+.btn-brand-dark:hover {
+  background-color: var(--brand-primary);
+  color: var(--brand-accent);
+}
+.hero-bowl-img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+}
+
+/* Secciones Generales */
+.bg-brand-light {
+  background-color: var(--brand-bg);
+}
+.section-main-title {
+  color: var(--brand-primary);
+  font-weight: 700;
+  font-size: 1.75rem;
+  letter-spacing: 0.5px;
+}
+.border-top-layout {
+  border-top: 1px solid rgba(12, 62, 38, 0.08);
+}
+
+/* ¿Qué Somos? - Pill Banner */
+.pill-banner {
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  display: inline-block;
+  width: 100%;
+}
+.lead-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--brand-dark);
+}
+
+/* ¿Qué Hacemos? - Timeline */
+.timeline-svg-line {
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  bottom: 40px;
+  width: 2px;
+  background: var(--brand-primary);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.timeline-card {
+  border-radius: 12px;
+  z-index: 2;
+  border: none;
+}
+.step-number {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background-color: var(--brand-dark);
+  color: #FFFFFF;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+.text-md-end .step-number {
+  left: auto;
+  right: 20px;
+}
+.text-accent-green {
+  color: var(--brand-accent);
+  letter-spacing: 0.5px;
+  font-size: 1.15rem;
+}
+.text-muted-dark {
+  color: #4a5a50;
+  font-size: 0.95rem;
+}
+
+/* Tarjetas de Planes */
+.plan-card {
+  border-radius: 30px;
+  border: none;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.plan-card:hover {
+  transform: translateY(-5px);
+}
+.plan-visual {
+  background-color: #E2EADF;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+}
+.plan-title {
+  color: var(--brand-accent);
+  font-size: 1.35rem;
+}
+.plan-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--brand-dark);
+}
+.btn-plan {
+  background-color: var(--brand-dark);
+  color: #FFFFFF;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 10px;
+  border: none;
+}
+.btn-plan:hover {
+  background-color: var(--brand-primary);
+  color: #FFFFFF;
+}
+.featured-plan {
+  border: 2px solid var(--brand-accent);
+}
+.badge-featured {
+  background-color: var(--brand-accent);
+  color: var(--brand-dark);
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 5px 15px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 10px;
+}
+.btn-featured {
+  background-color: var(--brand-dark) !important;
+}
+
+/* Calculadora */
+.custom-calc-card {
+  border-radius: 0px;
+}
+.step-title {
+  font-size: 1.15rem;
+  color: var(--brand-primary);
+  border-bottom: 1px solid #e2eadf;
+  padding-bottom: 8px;
+  font-weight: 600;
+}
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brand-dark);
+}
+.form-control, .form-select {
+  border-radius: 4px;
+  border: 1px solid #ccd9c7;
+  padding: 10px;
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 0.25rem rgba(12, 62, 38, 0.1);
+}
+.btn-calc-submit {
+  background-color: var(--brand-primary);
+  color: #FFFFFF;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+.btn-calc-submit:hover {
+  background-color: var(--brand-dark);
+  color: var(--brand-accent);
+}
+
+/* Resultados Calculadora */
+.result-hero {
+  background-color: var(--brand-primary);
+}
+.text-accent {
+  color: var(--brand-accent) !important;
+}
+.result-card {
+  border-top: 4px solid var(--brand-primary) !important;
+  border-radius: 6px;
+}
+.border-dark-green { border-top-color: var(--brand-dark) !important; }
+.border-lime-green { border-top-color: var(--brand-accent) !important; }
+.border-mid-green { border-top-color: var(--brand-primary) !important; }
+
+.color-dark-green { color: var(--brand-dark); }
+.color-lime-green { color: var(--brand-accent); }
+.color-mid-green { color: var(--brand-primary); }
+
+.table-custom-header {
+  background-color: var(--brand-primary);
+  color: white;
+}
+.table-custom-header th {
+  background-color: var(--brand-primary) !important;
+  color: white !important;
+}
+
+/* ==========================================================================
+   NUEVOS ESTILOS: MÓDULO INTERACTIVO DE INGREDIENTES (PLANES)
+   ========================================================================== */
+
+/* Conmutador de idiomas */
+.btn-lang {
+  background-color: #FFFFFF;
+  color: var(--brand-dark);
+  border: 1px solid rgba(12, 62, 38, 0.15);
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 30px;
+  padding: 6px 16px;
+  transition: all 0.2s ease;
+}
+.btn-lang.active, .btn-lang:hover {
+  background-color: var(--brand-primary);
+  color: #FFFFFF;
+  border-color: var(--brand-primary);
+}
+
+/* Botones de navegación de categorías */
+.category-nav .btn-category {
+  background-color: #FFFFFF;
+  color: var(--brand-dark);
+  font-weight: 600;
+  border: 1px solid rgba(12, 62, 38, 0.1);
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+.category-nav .btn-category:hover,
+.category-nav .btn-category.active {
+  background-color: var(--brand-primary);
+  color: #FFFFFF !important;
+}
+
+/* Ocultación/Visualización de secciones */
+.market-section {
+  display: none;
+}
+.market-section.active {
+  display: block;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* Tarjeta Destacada de Introducción Nutricional */
+.intro-nutrition-card {
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-dark));
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(3, 26, 16, 0.15);
+}
+
+/* Tarjetas de items de ingredientes individuales */
+.market-item-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(12, 62, 38, 0.08);
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.market-item-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(12, 62, 38, 0.08);
+}
+.market-item-card h3 {
+  color: var(--brand-primary);
+}
+
+/* Contenedor Cuaderno (Lista de Compras) */
+.notebook-container {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(12, 62, 38, 0.1);
+  border-radius: 16px;
+  background-image: linear-gradient(rgba(12, 62, 38, 0.05) 1px, transparent 1px);
+  background-size: 100% 32px;
+}
+.notebook-list {
+  list-style-type: square;
+  padding-left: 1.5rem;
+  margin: 0;
+  line-height: 32px; /* Alineación perfecta con el renglón */
+  color: var(--brand-dark);
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

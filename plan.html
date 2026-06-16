@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gourmet Nutrition NY - Planes e Ingredientes</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">GOURMET NUTRITION NY <span class="brand-arrow">↓</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html#inicio">INICIO</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#que-somos">NOSOTROS</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">PLANES</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#calculadora">CALCULADORA</a></li>
+          <li class="nav-item"><a class="nav-link btn-nav-contact" href="index.html#contacto">CONTACTO</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-brand-light py-5 border-bottom-layout">
+    <div class="container text-center">
+      <h1 class="fw-bold color-dark-green mb-2" data-i18n="siteTitle">Mini Supermarket</h1>
+      <p class="text-muted-dark lead-text mb-4" data-i18n="siteSubtitle">Select your healthy ingredients - Gourmet Nutrition NY</p>
+      
+      <div class="lang-switch d-flex justify-content-center gap-2" aria-label="Language switcher">
+        <button type="button" data-lang="en" class="btn btn-lang active">🇺🇸 EN</button>
+        <button type="button" data-lang="es" class="btn btn-lang">🇪🇸 ES</button>
+        <button type="button" data-lang="pt" class="btn btn-lang">🇧🇷 PT</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container my-4">
+    <nav class="d-flex flex-wrap justify-content-center gap-2 category-nav">
+      <button class="btn btn-category active" onclick="showSection('proteins')" data-i18n="navProteins">Proteins</button>
+      <button class="btn btn-category" onclick="showSection('carbs')" data-i18n="navCarbs">Carbohydrates</button>
+      <button class="btn btn-category" onclick="showSection('fats')" data-i18n="navFats">Fats</button>
+      <button class="btn btn-category" onclick="showSection('produce')" data-i18n="navProduce">Fruits & Vegetables</button>
+      <button class="btn btn-category position-relative text-accent" onclick="showSection('shopping-list')" data-i18n="navList">🛒 Shopping List</button>
+    </nav>
+  </div>
+
+  <main class="container mb-5">
+    
+    <section id="proteins" class="market-section active">
+      <div class="row g-4">
+        <div class="col-12">
+          <div class="intro-nutrition-card p-4 text-white">
+            <h3 class="fw-bold mb-3" data-i18n="proteinIntroTitle">🥩 What is Protein?</h3>
+            <p data-i18n="proteinIntroP1">Let me break it down for you. Protein is the brick and mortar of your body. It builds your muscles, skin, nails—your strength.</p>
+            <p data-i18n="proteinIntroP2">It's not just that powder guys at the gym drink to get jacked. Protein is in everything from chicken and fish to eggs and even beans.</p>
+            <p class="fw-bold color-lime-green" data-i18n="proteinIntroP3">Protein keeps you full. If you're constantly hungry, chances are you're not eating enough protein.</p>
+            <p class="mb-0" data-i18n="proteinIntroP4">Want to feel strong, satisfied, and take care of your body? Start by adding more protein to your plate. Every. Single. Day.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemChickenTitle">Chicken Breast</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemChickenDesc">Lean, versatile and packed with protein — great for meal prep and low-fat diets.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemChickenTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemGroundTurkeyTitle">Ground Turkey</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemGroundTurkeyDesc">Lower in fat than beef, high in protein. Ideal for tacos, bowls, and more.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemGroundTurkeyTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemSirloinSteakTitle">Sirloin Steak</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemSirloinSteakDesc">High-quality red meat with excellent iron and protein content. Enjoy grilled or pan-seared.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemSirloinSteakTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemLeanPorkChopsTitle">Lean Pork Chops</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemLeanPorkChopsDesc">Great source of protein and zinc. Choose grilled or baked for a healthy meal.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemLeanPorkChopsTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemEggsTitle">Eggs</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemEggsDesc">Affordable and versatile complete protein source. Great for breakfast or snacks.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemEggsTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemCannedTunaTitle">Canned Tuna</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemCannedTunaDesc">Convenient and shelf-stable. High in protein and ideal for quick meals or salads.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemCannedTunaTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemSalmonFilletTitle">Salmon Fillet</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemSalmonFilletDesc">Rich in omega-3 fats and high-quality protein. Excellent for heart and brain health.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemSalmonFilletTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemProteinPowderTitle">Protein Powder</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemProteinPowderDesc">Quick protein option post-workout or in smoothies. Choose clean-label options.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemProteinPowderTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemGroundBeefTitle">Ground Beef (90% Lean)</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemGroundBeefDesc">Great source of iron and protein. Ideal for meatballs, tacos, or bowls.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemGroundBeefTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemTofuTitle">Tofu</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemTofuDesc">Plant-based protein made from soybeans. Great in stir-fries, soups, or grilled.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemTofuTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemLentilsTitle">Lentils</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemLentilsDesc">High in fiber and plant-based protein. Ideal for soups, salads, and veggie burgers.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemLentilsTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemGreekYogurtTitle">Greek Yogurt</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemGreekYogurtDesc">Thick, creamy and rich in protein. Great for breakfast, snacks or smoothies.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemGreekYogurtTitle'))" data-i18n="addToList">Add to List</button></div></div>
+      </div>
+    </section>
+
+    <section id="carbs" class="market-section">
+      <div class="row g-4">
+        <div class="col-12">
+          <div class="intro-nutrition-card p-4 text-white">
+            <h3 class="fw-bold mb-3" data-i18n="carbIntroTitle">🍞 What are Carbohydrates?</h3>
+            <p data-i18n="carbIntroP1">Carbs are your body's main source of energy. They're not the enemy — they power your brain and workouts.</p>
+            <p data-i18n="carbIntroP2">Think of carbs as fuel. Just choose the right ones like whole grains, fruits, and veggies — not the ultra-processed junk.</p>
+            <p class="mb-0 fw-bold color-lime-green" data-i18n="carbIntroP3">Balance is key. You don't need to fear carbs; you just need to respect their quality and quantity.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemQuinoaTitle">Quinoa</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemQuinoaDesc">Complete protein grain with all essential amino acids. Fluffy texture, perfect for bowls and salads.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemQuinoaTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemBrownRiceTitle">Brown Rice</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemBrownRiceDesc">Whole grain rice rich in fiber and B vitamins. Great base for stir-fries and meal prep.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemBrownRiceTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemOatsTitle">Steel-Cut Oats</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemOatsDesc">Heart-healthy whole grain that keeps you full. Perfect for breakfast or overnight oats.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemOatsTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemSweetPotatoTitle">Sweet Potatoes</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemSweetPotatoDesc">Nutrient-dense root vegetable packed with vitamin A and fiber. Great roasted or mashed.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemSweetPotatoTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemWholeBreadTitle">Whole Grain Bread</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemWholeBreadDesc">Look for 100% whole grain with minimal ingredients. Great for toast and sandwiches.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemWholeBreadTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemBuckwheatTitle">Buckwheat</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemBuckwheatDesc">Gluten-free pseudo-grain with earthy flavor. High in protein and minerals.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemBuckwheatTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemBarleyTitle">Pearl Barley</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemBarleyDesc">Chewy grain high in soluble fiber. Perfect for soups, stews, and grain bowls.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemBarleyTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemWholePastaTitle">Whole Wheat Pasta</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemWholePastaDesc">Higher in fiber than regular pasta. Pair with vegetables and lean protein.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemWholePastaTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemBananasTitle">Bananas</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemBananasDesc">Natural energy source with potassium. Perfect pre or post-workout snack.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemBananasTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemBerriesTitle">Mixed Berries</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemBerriesDesc">Antioxidant powerhouses with natural sweetness. Great for smoothies and yogurt.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemBerriesTitle'))" data-i18n="addToList">Add to List</button></div></div>
+      </div>
+    </section>
+
+    <section id="fats" class="market-section">
+      <div class="row g-4">
+        <div class="col-12">
+          <div class="intro-nutrition-card p-4 text-white">
+            <h3 class="fw-bold mb-3" data-i18n="fatIntroTitle">🥑 What are Healthy Fats?</h3>
+            <p data-i18n="fatIntroP1">Fats get a bad rap, but your body needs them. The key is choosing the right kind — the ones that fuel your brain and fight inflammation.</p>
+            <p data-i18n="fatIntroP2">Think of fats as your long-lasting energy source. They're in foods like avocado, nuts, seeds, olive oil, and fatty fish.</p>
+            <p class="mb-0 fw-bold color-lime-green" data-i18n="fatIntroP3">Just watch your portions. Fat is dense in calories, but super valuable in a balanced diet.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemAvocadoTitle">Avocados</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemAvocadoDesc">Creamy fruit rich in monounsaturated fats. Perfect for toast, salads, and guacamole.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemAvocadoTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemOliveOilTitle">Extra Virgin Olive Oil</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemOliveOilDesc">Heart-healthy cooking oil with antioxidants. Great for cooking and dressings.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemOliveOilTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemAlmondsTitle">Raw Almonds</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemAlmondsDesc">Protein-rich nuts with vitamin E. Perfect snack or salad topping.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemAlmondsTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemWalnutsTitle">Walnuts</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemWalnutsDesc">Brain-healthy nuts rich in omega-3s. Great in oatmeal or as a snack.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemWalnutsTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemChiaSeedsTitle">Chia Seeds</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemChiaSeedsDesc">Tiny seeds packed with omega-3s and fiber. Perfect for puddings and smoothies.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemChiaSeedsTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemFlaxSeedsTitle">Ground Flax Seeds</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemFlaxSeedsDesc">Omega-3 rich seeds best absorbed when ground. Add to smoothies or yogurt.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemFlaxSeedsTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemNutButterTitle">Natural Almond Butter</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemNutButterDesc">Pure ground almonds with no added sugar. Great on apples or toast.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemNutButterTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemCoconutOilTitle">Coconut Oil</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemCoconutOilDesc">Stable cooking oil with medium-chain fats. Good for high-heat cooking.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemCoconutOilTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemSesameOilTitle">Sesame Oil</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemSesameOilDesc">Flavorful oil perfect for Asian dishes. A little goes a long way.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemSesameOilTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemOlivesTitle">Olives</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemOlivesDesc">Mediterranean staple rich in healthy fats. Great for snacking or cooking.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemOlivesTitle'))" data-i18n="addToList">Add to List</button></div></div>
+      </div>
+    </section>
+
+    <section id="produce" class="market-section">
+      <div class="row g-4">
+        <div class="col-12">
+          <div class="intro-nutrition-card p-4 text-white">
+            <h3 class="fw-bold mb-3" data-i18n="fruitsIntroTitle">🍎 Fruits & Vegetables</h3>
+            <p data-i18n="fruitsIntroP1">These are nature's multivitamins. Packed with vitamins, minerals, antioxidants, and fiber that your body craves.</p>
+            <p data-i18n="fruitsIntroP2">Eat the rainbow — different colors mean different nutrients. The more colorful your plate, the more nutrition you're getting.</p>
+            <p class="mb-0 fw-bold color-lime-green" data-i18n="fruitsIntroP3">Fresh, frozen, or dried (without added sugar) — they all count. Just aim for variety and enjoy nature's candy!</p>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemSpinachTitle">Fresh Spinach</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemSpinachDesc">Iron-rich leafy green packed with folate. Perfect for salads, smoothies, and sautéing.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemSpinachTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemKaleTitle">Kale</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemKaleDesc">Superfood green loaded with vitamins A, C, and K. Great massaged in salads or baked as chips.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemKaleTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemBroccoliTitle">Broccoli</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemBroccoliDesc">Cruciferous vegetable high in vitamin C and fiber. Delicious steamed, roasted, or stir-fried.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemBroccoliTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemBellPeppersTitle">Bell Peppers</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemBellPeppersDesc">Colorful vegetables loaded with vitamin C. Crunchy and sweet, perfect raw or cooked.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemBellPeppersTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemCarrotsTitle">Carrots</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemCarrotsDesc">Orange vegetables rich in beta-carotene for eye health. Great raw, roasted, or in soups.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemCarrotsTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemTomatoesTitle">Tomatoes</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemTomatoesDesc">Lycopene-rich fruit that's great fresh or cooked. Perfect in sauces and salads.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemTomatoesTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemCucumberTitle">Cucumbers</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemCucumberDesc">Hydrating and refreshing vegetable. Perfect for salads, snacking, or infused water.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemCucumberTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemApplesTitle">Apples</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemApplesDesc">Crunchy fruits high in fiber. Perfect snack with nut butter or in salads.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemApplesTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemBlueberriesTitle">Blueberries</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemBlueberriesDesc">Antioxidant superstars that support brain health. Great fresh, frozen, or in smoothies.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemBlueberriesTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemOrangesTitle">Oranges</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemOrangesDesc">Vitamin C powerhouses that boost immune system. Perfect for snacking or fresh juice.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemOrangesTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemMushroomsTitle">Mushrooms</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemMushroomsDesc">Umami-rich fungi packed with B vitamins. Great sautéed, grilled, or in soups.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemMushroomsTitle'))" data-i18n="addToList">Add to List</button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="card market-item-card h-100 p-4"><h3 class="h5 fw-bold" data-i18n="itemZucchiniTitle">Zucchini</h3><p class="text-muted-dark small flex-grow-1" data-i18n="itemZucchiniDesc">Versatile summer squash low in calories. Perfect spiralized as "noodles" or grilled.</p><button class="btn btn-brand-dark btn-sm mt-3 w-100" onclick="addToList(t('itemZucchiniTitle'))" data-i18n="addToList">Add to List</button></div></div>
+      </div>
+    </section>
+
+    <section id="shopping-list" class="market-section">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="notebook-container p-4 shadow">
+            <h2 class="text-center fw-bold h4 mb-3 color-dark-green" data-i18n="shoppingListTitle">Your Shopping List</h2>
+            
+            <ul id="list" class="notebook-list"></ul>
+            
+            <div class="d-flex gap-2 justify-content-center mt-4">
+              <button class="btn btn-calc-submit px-4 py-2" onclick="printList()" data-i18n="printButton">🖨️ Print List</button>
+              <button class="btn btn-outline-danger border-2 px-4 py-2 fw-bold" style="border-radius:4px;" onclick="clearList()" data-i18n="clearButton">🗑️ Clear List</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

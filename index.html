@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gourmet Nutrition NY - Plataforma Nutricional</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">GOURMET NUTRITION NY <span class="brand-arrow">↓</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#inicio">INICIO</a></li>
+          <li class="nav-item"><a class="nav-link" href="#que-somos">NOSOTROS</a></li>
+          <li class="nav-item"><a class="nav-link active" href="plan.html">PLANES</a></li>
+          <li class="nav-item"><a class="nav-link" href="#calculadora">CALCULADORA</a></li>
+          <li class="nav-item"><a class="nav-link btn-nav-contact" href="#contacto">CONTACTO</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="inicio" class="hero-section text-center">
+    <div class="container">
+      <h1 class="display-3 fw-extrabold hero-title mb-4">NO ES UNA DIETA. ES UNA ESTRUCTURA</h1>
+      
+      <div class="hero-btn-group d-flex justify-content-center gap-3 my-4">
+        <a href="#planes" class="btn btn-brand-dark px-4 py-2">Ver programas</a>
+        <a href="https://wa.me/tu_numero" target="_blank" class="btn btn-brand-dark px-4 py-2">Enviar un mensaje</a>
+      </div>
+
+      <div class="hero-image-container mt-4">
+        <img src="img/img.png" alt="Estructura Nutricional" class="img-fluid hero-bowl-img">
+      </div>
+    </div>
+  </header>
+
+  <section id="que-somos" class="py-5 bg-brand-light">
+    <div class="container text-center py-3">
+      <h2 class="section-main-title mb-4">¿QUÉ SOMOS?</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="pill-banner p-4 p-md-5 shadow-sm">
+            <p class="lead-text mb-0">
+              Somos una plataforma de educación nutricional y coaching personalizado creada para ayudar a las personas a recuperar el control de su alimentación, energía y bienestar a través de la estructura, el conocimiento y el acompañamiento real.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="que-hacemos" class="py-5 bg-brand-light">
+    <div class="container py-3">
+      <h2 class="section-main-title text-center mb-5">¿QUÉ HACEMOS?</h2>
+      
+      <div class="timeline-container position-relative mx-auto" style="max-width: 900px;">
+        <div class="timeline-svg-line d-none d-md-block"></div>
+
+        <div class="row timeline-row justify-content-start mb-5">
+          <div class="col-md-7">
+            <div class="timeline-card p-4 bg-white shadow-sm position-relative">
+              <span class="step-number">1</span>
+              <h4 class="fw-bold text-accent-green mb-2">ANALIZAMOS</h4>
+              <p class="mb-0 text-muted-dark">Comida, horarios, energía, hábitos y objetivos.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row timeline-row justify-content-end mb-5 text-md-end">
+          <div class="col-md-7">
+            <div class="timeline-card p-4 bg-white shadow-sm position-relative">
+              <span class="step-number">2</span>
+              <h4 class="fw-bold text-accent-green mb-2">EXPLICAMOS</h4>
+              <p class="mb-0 text-muted-dark">Conceptos básicos de nutrición de forma simple.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row timeline-row justify-content-start mb-5">
+          <div class="col-md-7">
+            <div class="timeline-card p-4 bg-white shadow-sm position-relative">
+              <span class="step-number">3</span>
+              <h4 class="fw-bold text-accent-green mb-2">CREAMOS</h4>
+              <p class="mb-0 text-muted-dark">Estructura diaria: rutina, comidas, hidratación, movimiento y seguimiento.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row timeline-row justify-content-end mb-5 text-md-end">
+          <div class="col-md-7">
+            <div class="timeline-card p-4 bg-white shadow-sm position-relative">
+              <span class="step-number">4</span>
+              <h4 class="fw-bold text-accent-green mb-2">ADAPTAMOS</h4>
+              <p class="mb-0 text-muted-dark">Según tu vida real, no según una dieta perfecta imposible de sostener.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="planes" class="py-5 bg-brand-light border-top-layout">
+    <div class="container py-3">
+      <h2 class="section-main-title text-center mb-5">PLANES</h2>
+      
+      <div class="row g-4 justify-content-center align-items-stretch">
+        <div class="col-md-4">
+          <div class="plan-card p-4 bg-white h-100 d-flex flex-column text-center shadow-sm">
+            <div class="plan-visual mb-3 mx-auto"></div>
+            <h4 class="fw-bold plan-title mb-2">Visita virtual 1 a 1</h4>
+            <p class="text-muted small mb-3">6 días de duración</p>
+            <div class="plan-price mb-3">$125</div>
+            <hr class="w-25 mx-auto my-3">
+            <div class="plan-details text-start mb-4 flex-grow-1">
+              <p class="small mb-2"><strong>Incluye:</strong> 3 días de observación previa + sesión virtual de 90 minutos + 2 días de seguimiento.</p>
+              <p class="small mb-0 text-muted-dark"><strong>Ideal para:</strong> Persona que necesita claridad rápida, estructura inicial y una guía personalizada.</p>
+            </div>
+            <a href="https://wa.me/tu_numero?text=Hola,%20quiero%20mi%20Visita%20Virtual%201%20a%201" target="_blank" class="btn btn-plan w-100 mt-auto">Comenzar mi Reset Inicial</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="plan-card p-4 bg-white h-100 d-flex flex-column text-center shadow-sm featured-plan">
+            <span class="badge-featured">Programa recomendado</span>
+            <div class="plan-visual mb-3 mx-auto"></div>
+            <h4 class="fw-bold plan-title mb-2">21 Day Nutrition Reset</h4>
+            <p class="text-muted small mb-3">21 días de duración</p>
+            <div class="plan-price mb-3">$275</div>
+            <hr class="w-25 mx-auto my-3">
+            <div class="plan-details text-start mb-4 flex-grow-1">
+              <p class="small mb-2"><strong>Incluye:</strong> 3 días previos + cita virtual + seguimiento durante 21 días + cita virtual final.</p>
+              <p class="small mb-0 text-muted-dark"><strong>Ideal para:</strong> Persona que quiere cambiar hábitos, bajar peso, controlar hambre y crear estructura real.</p>
+            </div>
+            <a href="https://wa.me/tu_numero?text=Hola,%20quiero%20el%20Reset%20de%2021%20días" target="_blank" class="btn btn-plan w-100 mt-auto btn-featured">Quiero el Reset de 21 días</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="plan-card p-4 bg-white h-100 d-flex flex-column text-center shadow-sm">
+            <div class="plan-visual mb-3 mx-auto"></div>
+            <h4 class="fw-bold plan-title mb-2">90 Days - Recupera tu vida</h4>
+            <p class="text-muted small mb-3">90 días de transformación</p>
+            <div class="plan-price mb-3">$425</div>
+            <hr class="w-25 mx-auto my-3">
+            <div class="plan-details text-start mb-4 flex-grow-1">
+              <p class="small mb-2"><strong>Incluye:</strong> Proceso extendido con educación, seguimiento, reintroducción estratégica de alimentos y consolidación de hábitos.</p>
+              <p class="small mb-0 text-muted-dark"><strong>Ideal para:</strong> Persona que quiere una transformación más profunda y sostenible en el tiempo.</p>
+            </div>
+            <a href="https://wa.me/tu_numero?text=Hola,%20quiero%20recuperar%20mi%20vida%20y%20mi%20salud" target="_blank" class="btn btn-plan w-100 mt-auto">Recuperar mi vida y mi salud</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="calculadora" class="py-5 bg-brand-light border-top-layout">
+    <div class="container py-3">
+      <h2 class="section-main-title text-center mb-5">CALCULADORA DE ESTRUCTURA NUTRICIONAL</h2>
+
+      <div class="card p-4 p-md-5 shadow-sm border-0 custom-calc-card">
+        <form id="fitnessForm">
+          
+          <h3 class="step-title">1. Datos Personales & Físicos</h3>
+          <div class="row g-4 mb-4">
+            <div class="col-md-3">
+              <label id="weightLabel" for="weight" class="form-label">Peso (kg)</label>
+              <input type="number" step="0.1" id="weight" class="form-control" placeholder="Ej. 70" required>
+            </div>
+            <div id="metricHeightGroup" class="col-md-3">
+              <label for="height" class="form-label">Altura (cm)</label>
+              <input type="number" step="0.1" id="height" class="form-control" placeholder="Ej. 175" required>
+            </div>
+            <div id="imperialHeightGroup" class="col-md-3 d-none">
+              <div class="row g-2">
+                <div class="col-6">
+                  <label for="heightFt" class="form-label">Altura (ft)</label>
+                  <input type="number" id="heightFt" class="form-control" placeholder="5">
+                </div>
+                <div class="col-6">
+                  <label for="heightIn" class="form-label">Altura (in)</label>
+                  <input type="number" id="heightIn" class="form-control" placeholder="9">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="age" class="form-label">Edad</label>
+              <input type="number" id="age" class="form-control" placeholder="Ej. 30" required>
+            </div>
+            <div class="col-md-3">
+              <label for="gender" class="form-label">Género</label>
+              <select id="gender" class="form-select">
+                <option value="male">Hombre</option>
+                <option value="female">Mujer</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label for="units" class="form-label">Sistema</label>
+              <select id="units" class="form-select" onchange="toggleUnits();">
+                <option value="metric">Métrico</option>
+                <option value="imperial">Imperial</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="bodyFat" class="form-label">% Grasa Corporal (Opcional)</label>
+              <input type="number" id="bodyFat" class="form-control" placeholder="Ej. 18">
+            </div>
+          </div>
+
+          <h3 class="step-title mt-5">2. Actividad y Objetivos</h3>
+          <div class="row g-4 mb-3">
+            <div class="col-md-4">
+              <label for="activity" class="form-label">Nivel de Actividad</label>
+              <select id="activity" class="form-select">
+                <option value="1.2">Sedentario</option>
+                <option value="1.375">Ligero (1-3 días)</option>
+                <option value="1.55">Moderado (3-5 días)</option>
+                <option value="1.725">Muy Activo (6-7 días)</option>
+                <option value="1.9">Atleta</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="goal" class="form-label">Objetivo</label>
+              <select id="goal" class="form-select">
+                <option value="deficit">Pérdida de Grasa</option>
+                <option value="maintain">Mantenimiento</option>
+                <option value="surplus">Superávit</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="meals" class="form-label">Comidas al Día</label>
+              <input type="number" id="meals" class="form-control" value="4" min="2" max="6">
+            </div>
+          </div>
+
+          <h3 class="step-title mt-5">3. Entrenamiento Intratreno</h3>
+          <div class="row g-4 mb-4">
+            <div class="col-md-6">
+              <label for="durMin" class="form-label">Duración Entreno (min)</label>
+              <input type="number" id="durMin" class="form-control" placeholder="Ej. 60">
+            </div>
+            <div class="col-md-6">
+              <label for="sport" class="form-label">Disciplina Principal</label>
+              <select id="sport" class="form-select">
+                <option value="weights">Pesas / Musculación</option>
+                <option value="runner">Corredor / Running</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mt-5 text-center">
+            <button type="button" class="btn btn-calc-submit btn-lg px-5" onclick="calculate()">Calcular Resultados</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="resultsZone" class="mt-5">
+        <div id="errorBox" class="alert alert-danger d-none" role="alert"></div>
+        
+        <div id="summaryCards" class="row g-4 d-none mt-2">
+          
+          <div class="col-md-12 mb-3">
+            <div class="card p-4 text-center border-0 result-hero">
+               <h4 class="text-white">Energía Diaria Objetivo</h4>
+               <h2 class="display-3 fw-bold text-accent mb-0" id="resKcal">0</h2>
+               <p class="text-white-50 mb-0">Kcal / día</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card p-4 text-center border-0 shadow-sm result-card border-dark-green">
+              <h5 class="text-muted text-uppercase small fw-bold">Proteína</h5>
+              <h2 id="resProt" class="fw-bold color-dark-green">0g</h2>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-4 text-center border-0 shadow-sm result-card border-lime-green">
+              <h5 class="text-muted text-uppercase small fw-bold">Carbohidratos</h5>
+              <h2 id="resCarb" class="fw-bold color-lime-green">0g</h2>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-4 text-center border-0 shadow-sm result-card border-mid-green">
+              <h5 class="text-muted text-uppercase small fw-bold">Grasas</h5>
+              <h2 id="resFat" class="fw-bold color-mid-green">0g</h2>
+            </div>
+          </div>
+
+          <div class="col-md-12 mt-5 text-center d-flex justify-content-center">
+             <canvas id="macroChart" class="d-none" style="max-height: 300px; max-width: 100%;"></canvas>
+          </div>
+          
+          <div id="mealsWrap" class="col-md-12 d-none mt-5">
+            <h4 class="fw-bold mb-3 color-dark-green text-center">División de Comidas</h4>
+            <div class="table-responsive bg-white shadow-sm p-3 rounded">
+              <table class="table table-striped align-middle text-center mb-0">
+                <thead class="table-custom-header">
+                  <tr>
+                    <th>Comida</th>
+                    <th>Kcal</th>
+                    <th>Proteína</th>
+                    <th>Grasas</th>
+                    <th>Carbos</th>
+                  </tr>
+                </thead>
+                <tbody id="mealsBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="contacto" class="palette-accent-bar d-flex">
+    <div class="flex-grow-1" style="background-color: #031A10; height: 15px;"></div>
+    <div class="flex-grow-1" style="background-color: #0C3E26; height: 15px;"></div>
+    <div class="flex-grow-1" style="background-color: #8AD400; height: 15px;"></div>
+  </div>
+
+  <footer class="text-center py-4 text-white" style="background-color: #031A10;">
+    <p class="mb-0 small">© 2026 Gourmet Nutrition NY. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
